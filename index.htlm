@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlan Sitesi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="file"] {
+            padding: 3px;
+        }
+        .form-group button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+        .ilans {
+            margin-top: 20px;
+        }
+        .ilan {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+        .ilan h2 {
+            margin-top: 0;
+        }
+        .comments {
+            margin-top: 10px;
+        }
+        .comment {
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>İlan Sitesi</h1>
+</header>
+
+<nav>
+    <a href="#">Ana Sayfa</a>
+    <a href="#">İlanlar</a>
+    <a href="#">Hakkımızda</a>
+    <a href="#">İletişim</a>
+</nav>
+
+<div class="container">
+    <h2>İlan Ver</h2>
+    <form>
+        <div class="form-group">
+            <label for="title">İlan Başlığı</label>
+            <input type="text" id="title" name="title" required>
+        </div>
+        <div class="form-group">
+            <label for="category">Kategori</label>
+            <input type="text" id="category" name="category" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Açıklama</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="price">Fiyat</label>
+            <input type="text" id="price" name="price" required>
+        </div>
+        <div class="form-group">
+            <label for="contact">İletişim Bilgileri</label>
+            <input type="text" id="contact" name="contact" required>
+        </div>
+        <div class="form-group">
+            <label for="image">Fotoğraf</label>
+            <input type="file" id="image" name="image" accept="image/*">
+        </div>
+        <div class="form-group">
+            <button type="submit">İlanı Yayınla</button>
+        </div>
+    </form>
+
+    <div class="ilans">
+        <div class="ilan">
+            <h2>Örnek İlan Başlığı</h2>
+            <p><strong>Kategori:</strong> Elektronik</p>
+            <p><strong>Fiyat:</strong> 1000 TL</p>
+            <p><strong>Açıklama:</strong> Bu bir örnek ilan açıklamasıdır.</p>
+            <p><strong>İletişim:</strong> 123-456-7890</p>
+            <div class="comments">
+                <h3>Yorumlar</h3>
+                <div class="comment">
+                    <p><strong>Kullanıcı 1:</strong> Bu ürün hala satılık mı?</p>
+                </div>
+                <div class="comment">
+                    <p><strong>Kullanıcı 2:</strong> Fiyatı biraz fazla değil mi?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
